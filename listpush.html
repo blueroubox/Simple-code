@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>	
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+   <title>??22</title>
+   
+   <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+	<style>
+	  div.MenuList{
+			border: solid 1px grey;
+			background-color : pink;
+			width : 15vw;
+			top: 0;
+			left : 0;
+			transform: translateX(0);
+			transition: all 0.5s;
+		}
+				 
+		div.MenuList_ative{
+			border: solid 1px grey;
+			background-color : pink;
+			width : 15vw;
+			top: 0;
+			left : 0;
+			margin-left : -15vw;
+			transform: translateX(0);
+			transition: all 0.5s;
+		}
+	</style>
+	
+</head>
+<body>
+    <button class="btn" id="btnon">X</button><br/>
+	<div class="MenuList" id="Divon" >
+	  <div class="title">選單</div>
+	  <div class="list">
+		<ul class="optionTitle">
+		  <li>01</li>
+		  <li>02</li>
+		  <li>03</li>
+		  <li>04</li>
+		  <li>05</li>
+		  <li>06</li>
+		</ul>
+	  </div>
+	</div>
+</body>
+
+<!-- javascript-->
+	<script>
+	
+	function  move(){
+	
+	}
+	
+	$( "#btnon" ).click(function() {
+		 console.log();		
+		let divname = $("#Divon").attr("class");
+		if (divname == "MenuList"){
+		  $("#Divon").attr("class", divname+"_ative");
+		}else{
+		  $("#Divon").attr("class", "MenuList");
+		}
+	});
+	
+	
+	</script>
+</html>
